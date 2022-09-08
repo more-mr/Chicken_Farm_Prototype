@@ -30,15 +30,15 @@ http://127.0.0.1:8000/admin/
 <br>
 <br>
 <br>
-####HOW ITS SUPPOSED TO LOOK 👇🎉🚩
+##HOW ITS SUPPOSED TO LOOK 👇🎉🚩
 
 <p float="left">
-  <img src="https://github.com/more-mr/Chicken_Farm_Prototype/blob/main/snapShotOfSite/snapofweb0.png" width="200"/>
-  <img src="https://github.com/more-mr/Chicken_Farm_Prototype/blob/main/snapShotOfSite/snapofweb1.png" width="200"/>
-  <img src="https://github.com/more-mr/Chicken_Farm_Prototype/blob/main/snapShotOfSite/snapofweb0itm.png" width="200"/>
-  <img src="https://github.com/more-mr/Chicken_Farm_Prototype/blob/main/snapShotOfSite/snapofweb0about.png" width="200"/>
-  <img src="https://github.com/more-mr/Chicken_Farm_Prototype/blob/main/snapShotOfSite/snapofweb0check.png" width="200"/>
-  <img src="https://github.com/more-mr/Chicken_Farm_Prototype/blob/main/snapShotOfSite/snapofdb.png" width="200"/>
-  <img src="https://github.com/more-mr/Chicken_Farm_Prototype/blob/main/snapShotOfSite/snapofItems.png" width="200"/>
-  <img src="https://github.com/more-mr/Chicken_Farm_Prototype/blob/main/snapShotOfSite/snapofusers.png" width="200"/>
+  <img src="https://github.com/more-mr/Chicken_Farm_Prototype/blob/main/snapShotOfSite/snapofweb0.png" width="500"/>
+  <img src="https://github.com/more-mr/Chicken_Farm_Prototype/blob/main/snapShotOfSite/snapofweb1.png" width="500"/>
+  <img src="https://github.com/more-mr/Chicken_Farm_Prototype/blob/main/snapShotOfSite/snapofweb0itm.png" width="500"/>
+  <img src="https://github.com/more-mr/Chicken_Farm_Prototype/blob/main/snapShotOfSite/snapofweb0about.png" width="500"/>
+  <img src="https://github.com/more-mr/Chicken_Farm_Prototype/blob/main/snapShotOfSite/snapofweb0check.png" width="500"/>
+  <img src="https://github.com/more-mr/Chicken_Farm_Prototype/blob/main/snapShotOfSite/snapofdb.png" width="500"/>
+  <img src="https://github.com/more-mr/Chicken_Farm_Prototype/blob/main/snapShotOfSite/snapofItems.png" width="500"/>
+  <img src="https://github.com/more-mr/Chicken_Farm_Prototype/blob/main/snapShotOfSite/snapofusers.png" width="500"/>
 </p>
