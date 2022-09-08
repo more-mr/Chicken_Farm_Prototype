@@ -5,14 +5,15 @@ This is a ecommerce website made for selling chickens using Yoco as its payment 
 Your going to need python and pip(usually included in python)
 <br>
 <h5>DOWNLOAD REQUIRED PACKAGES</h5>
-In the same directory as requirements.txt
+Make virtual enviroment 👈 (optional)
+In the <strong>same directory as requirements.txt</strong>
 
 ```
 pip install --requirement requirements.txt
 ```
 <br>
 <h5>RUN THE SERVER</h5>
-In the same directory as manage.py
+In the <strong>same directory as manage.py</strong>
 
 ```
 py manage.py runserver
