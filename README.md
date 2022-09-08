@@ -32,7 +32,7 @@ http://127.0.0.1:8000/admin/
 <br>
 <br>
 
-##HOW ITS SUPPOSED TO LOOK 👇🎉🚩
+## HOW ITS SUPPOSED TO LOOK 👇🎉🚩
 
 <p float="left">
   <img src="https://github.com/more-mr/Chicken_Farm_Prototype/blob/main/snapShotOfSite/snapofweb0.png" width="500"/>
