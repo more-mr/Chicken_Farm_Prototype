@@ -1,0 +1,182 @@
+body{
+    position: relative;
+    z-index: -5;
+}
+
+.container-fluid{
+    padding: 3% 15%;
+}
+
+/* ========================================================================= */
+
+.landing{
+    color: white;
+    background-color: #0d101f;
+    height: 80vh;
+}
+
+.navbar a{
+    color: white;
+    text-align: center;
+}
+
+.dropdown a{
+    color: #0d101f;
+}
+
+.navbar-toggler{
+
+    border-color: #ffae03;
+}
+
+.navbar-toggler-icon{
+
+   background-image: url(
+    "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 174, 3)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.landingText h1{
+    font-size: 7vw;
+    padding: 10% 0 0 0;
+}
+
+.highlight{
+    border-bottom: solid;
+    border-width: thick;
+    border-color: #FFAE03;
+}
+
+.landBackground{
+    /* width: 100%;
+    position: relative;
+    z-index: -1; */
+
+    width: 100%;
+    position: relative;
+    /* top: 105vh; */
+    /* display: contents; */
+    /* top: 100%; */
+    margin-bottom: -8%;
+    z-index: -1;
+}
+
+.landChicken{
+    text-align: center;
+    width: 45vw;
+    padding: 10% 0 0 0;
+    margin-left: -10%;
+}
+
+.landPic{
+    text-align: center;
+}
+
+/* ==================================================================== */
+
+.products {
+    
+    /* height: 100vh; */
+    position: relative;
+    /* top: 30vw; */
+    padding: 20% 0 0 0;
+    z-index: -2;
+    background: #FFAE03;
+    color: #1A2544;
+}
+
+.sectionHeading{
+
+    font-weight: 800;
+    text-align: center;
+}
+
+.searchSec{
+
+    text-align: right;
+    padding: 2% 0 5% 0;
+}
+
+.searchSec input{
+    display: inline;
+    width: 170px;
+}
+
+.searchSec button{
+
+    background: white;
+    margin-bottom: 0.3rem;
+    border-radius: 43%;
+}
+
+.dont{
+
+    color: #1A2544;
+
+}
+
+@media (max-width: 920px)
+{
+    .card-columns {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media (max-width: 690px)
+{
+    .card-columns {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+}
+
+.card-columns .card{
+    border-radius: 3rem;
+    margin-bottom: 1.75rem;
+}
+
+.landBackground1{
+    position: relative;
+    top: -19vw;
+    width: 100%;
+    margin-bottom: -10%;
+    z-index: -3;
+}
+
+/* ==================================================================== */
+
+.footer{
+    text-align: center;
+    background-color: white;
+    /* padding: 6rem 0 0 0; */
+}
+
+.footIconSizes{
+    
+    font-size: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* ==================================================================== */
+
+@media (max-width: 520px){
+
+    .products{
+        /* padding: 51% 0 0 0; */
+    }
+}
+
+@media (min-width: 992px){
+
+    .products{
+        padding: 10% 0 0 0;
+    }
+}
+
+.hideThis{
+    visibility: hidden;
+    display: none;
+}

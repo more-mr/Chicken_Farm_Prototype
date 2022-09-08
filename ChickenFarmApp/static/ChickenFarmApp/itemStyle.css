@@ -1,0 +1,100 @@
+/* ==================================================================== */
+.container-fluid{
+    padding: 3% 15%;
+}
+
+/* ==================================================================== */
+
+.highlight{
+    border-bottom: solid;
+    border-width: thick;
+    border-color: #333956;
+}
+
+/* ==================================================================== */
+.navbar a{
+    color: white;
+    text-align: center;
+}
+
+.dropdown a{
+    color: #0d101f;
+}
+
+.navbar-toggler{
+
+    border-color: #333956;
+}
+
+.navbar-toggler-icon{
+
+   background-image: url(
+    "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(51, 57, 86)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/* ==================================================================== */
+
+.footer{
+    text-align: center;
+    background-color: white;
+    /* padding: 6rem 0 0 0; */
+}
+
+.footIconSizes{
+    
+    font-size: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* ==================================================================== */
+
+.card{
+    border-radius: 3rem;
+    margin-bottom: 1.75rem;
+}
+
+/* ==================================================================== */
+
+/* take all of the above */
+.itemSec {
+    background: #FFAE03;
+    margin: 0 0 -35% 0;
+}
+
+.itmFace{
+    padding: 10% 0 0 0;
+}
+
+.discZone{
+    color: #333956;
+    padding: 10% 0 0 11%;
+}
+
+.itemName{
+    font-weight: 800;
+}
+
+.itemDesc{
+    padding: 4% 0 0 0;
+}
+.price{
+
+    text-align: right;
+    font-weight: 800;
+    padding: 18% 0 0 0;
+
+}
+
+.qty{
+
+}
+
+.landBackground1{
+    width: 100%;
+}
+
+.hideThis{
+    visibility: hidden;
+    display: none;
+}

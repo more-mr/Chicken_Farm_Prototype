@@ -1,0 +1,52 @@
+{% extends 'ChickenFarmApp/main.html' %}
+{% load static %}
+
+{% block styleContent %}
+<link rel="stylesheet" href="{% static 'ChickenFarmApp/itemStyle.css' %}">
+{% endblock %}
+
+{% block pageContent %}
+
+<section class="itemSec">
+    <div class="container-fluid">
+        {% include 'ChickenFarmApp/nav.html' %}
+
+        <div class="row itmFace">
+            <div class="col-md-6">
+                <div class="card">
+                    <!-- <img class="card-img-top" src="{% static 'ChickenFarmApp/frontChicken.png' %}" alt="Card image cap"> -->
+                    <img class="card-img-top" src="{{itemInPage.itemPhoto}}" alt="Card image cap">
+
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="discZone">
+
+                    <h1 class="itemName">{{itemInPage.itemName}}</h1>
+                    <h3 class="itemDesc">{{itemInPage.itemDesc}}</h3>
+
+                    <div class="price">
+                        <h2>R{{itemInPage.itemPrice}}</h2>
+                        <span class="qty"> qty{{itemInPage.itemQty}}</span>
+
+                        <br>
+                        <br>
+                        <button id="add/{{ itemInPage.id }}" type="submit" class="btn addMeToCart">
+                            <i class="fas fa-shopping-cart"></i> Add to cart
+                        </button>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<img class="landBackground1" src="{% static 'ChickenFarmApp/frontBackgrond1.svg' %}" alt="frontBackgrond1" srcset="">
+
+{% endblock %}

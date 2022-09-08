@@ -1,0 +1,90 @@
+{% extends 'ChickenFarmApp/main.html' %}
+{% load static %}
+
+
+{% block pageContent %}
+
+<section class="landing">
+
+  <div class="container-fluid">
+
+    {% include 'ChickenFarmApp/nav.html' %}
+
+    <div class="row">
+      <div class="col-lg-6 landingText">
+        <h1>
+          Choose <span class="highlight">Dolly and Sabby</span>
+        </h1>
+        <h4>For all your poultry desires</h4>
+      </div>
+
+      <div class="col-lg-6 landPic">
+        <img class="landChicken" src="{% static 'ChickenFarmApp/frontChicken.png' %}" alt="landChicken" srcset="">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<img class="landBackground" src="{% static 'ChickenFarmApp/frontBackgrond.svg' %}" alt="frontBackgrond" srcset="">
+
+<section class="products">
+
+  <h1 class="sectionHeading">Our egg-ceptional products</h1>
+
+  <div class="container-fluid">
+
+
+    <div class="card-columns">
+      {% if itemInPage %}
+      {% for itm in itemInPage %}
+
+      <a class="dont" href="/items/{{ itm.id }}">
+
+        <div class="card">
+          <!-- <img class="card-img-top" src="{% static 'ChickenFarmApp/frontChicken.png' %}" alt="Card image cap"> -->
+          <img class="card-img-top" src="items/{{itm.itemPhoto}}" alt="Card image cap">
+
+          <!-- <img src="{{itm.itemPhoto}}" alt="Card image cap"> -->
+          <div class="card-body">
+            <h3 class="card-title">{{itm.itemName}}</h3>
+            <blockquote class="blockquote mb-0">
+              <p>{{itm.itemDesc}}</p>
+            </blockquote>
+            <div class="cardBottom">
+              <h5 class="text-right">R{{itm.itemPrice}}</h5>
+              <h6 class="text-right">Quantity {{itm.itemQty}}</h6>
+              <div class="text-center">
+                <a href="">
+                  <button id="add/{{ itm.id }}" type="submit" class="btn addMeToCart">
+                    <i class="fas fa-shopping-cart"></i> Add to cart
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+
+      {% endfor %}
+      {% else %}
+      <div class="card bg-primary text-white text-center p-3">
+        <blockquote class="blockquote mb-0">
+          <p>Sorry, seems like we don't have that, try again later.</p>
+          <footer class="blockquote-footer">
+            <small>
+              The chicken didn't cross the road this time around
+            </small>
+          </footer>
+        </blockquote>
+      </div>
+      {% endif %}
+
+    </div>
+  </div>
+</section>
+
+<img class="landBackground1" src="{% static 'ChickenFarmApp/frontBackgrond1.svg' %}" alt="frontBackgrond1" srcset="">
+
+{% endblock %}

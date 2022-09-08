@@ -1,0 +1,15 @@
+{% extends 'ChickenFarmApp/main.html' %}
+{% load static %}
+
+{% block styleContent %}
+    <link rel="stylesheet" href="{% static 'ChickenFarmApp/itemStyle.css' %}">
+{% endblock %}
+
+{% block pageContent %}
+    
+    <div class="container-fluid">
+    {% include 'ChickenFarmApp/nav.html' %} 
+    {{itemInPage}}
+    </div>
+
+{% endblock pageContent %} 
