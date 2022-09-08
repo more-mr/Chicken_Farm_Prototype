@@ -6,6 +6,7 @@ Your going to need python and pip(usually included in python)
 <br>
 <h5>DOWNLOAD REQUIRED PACKAGES</h5>
 Make virtual enviroment 👈 (optional)
+<br>
 In the <strong>same directory as requirements.txt</strong>
 
 ```
