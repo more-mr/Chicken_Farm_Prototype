@@ -1,6 +1,6 @@
 #Added for me personally#
 TheNewChickenEnv
-ChickenFarmApp/uploadedItemImages/
+nameOfVirtualMachine
 ChickenFarmApp/templates/ChickenFarmApp/*.txt
 test
 
@@ -9,7 +9,6 @@ test
 *.pot
 *.pyc
 __pycache__
-db.sqlite3
 media
 
 # Installer logs 
