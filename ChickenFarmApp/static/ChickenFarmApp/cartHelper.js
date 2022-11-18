@@ -1,7 +1,7 @@
-console.log("cartHelper fonud")
+console.log("cartHelper found")
 
 $(document).ready(function(){
-    console.log("doc ready, jq working")
+    console.log("doc ready, jQuery working")
 
     
 
@@ -60,7 +60,7 @@ $(document).ready(function(){
         event.preventDefault();
         
         console.log(this.getAttribute('id'))
-        console.log("fuck")
+        console.log("ahh. . . lol")
 
         // $.ajax({
         //     type:'POST',
@@ -89,7 +89,8 @@ $(document).ready(function(){
             success: function(serverResponse){
                 console.log(serverResponse)
                 if(serverResponse.state){
-                    console.log("Fuck that shit")
+                    console.log("You tried to make a new user and it didnt work out. . . 🤷‍♀️🤷‍♀️🤷‍♀️")
+                    alert('The user name already exits, please use another name')
 
                 }else if(serverResponse) {
                 console.log("gonna make a cookie")
@@ -133,7 +134,8 @@ $(document).ready(function(){
                 console.log("sent post")
 
                 if(serverResponse.notfound){
-                    console.log("Fuck that shit")
+                    console.log("You tried to sign in and it didnt work out. . .🤷‍♀️🤷‍♀️")
+                    alert("Are you sure you exist?. . . just saying 👀")
 
                 }else if(serverResponse) {
                     console.log("gonna make a cookie")
@@ -189,7 +191,7 @@ $(document).ready(function(){
             });
         }else{
 
-            console.log('log in fuk nut')
+            console.log('please log')
         }
     })
 

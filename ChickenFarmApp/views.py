@@ -47,7 +47,7 @@ def deleteItm(request, item_id):
     return checkOut(request)
 
 def pay(request):
-    print("you got a printer")
+    print("you got a payer. . .")
 
     SECRET_KEY = 'sk_test_960bfde0VBrLlpK098e4ffeb53e1'
 
@@ -70,8 +70,8 @@ def pay(request):
 
 def addUser(request):
     #ADD TO CART
-   
-     if len(Cart.objects.filter(user= request.POST['usNm'])) and len(request.POST['usNm']) != 0 :
+     
+     if len(Cart.objects.filter(user= request.POST['usNm'])) < 1 and len(request.POST['usNm']) != 0 :
         Cart.objects.create(user = request.POST['usNm'], passW = request.POST['usPw'] )
         
         print("made")
@@ -217,6 +217,7 @@ def checkOut(request):
 
 
          for i in Cart.objects.get(user= request.COOKIES.get('user')).item_set.all() :
+            print('============================================================================')
             idOfCount = ItemCart.objects.get(cart = Cart.objects.get(user= request.COOKIES.get('user')), item = Item.objects.get(pk = i.id)).id
             howMuch.append(ItemCart.objects.get(pk=idOfCount).count) 
             total = total + i.itemPrice * ItemCart.objects.get(pk=idOfCount).count
