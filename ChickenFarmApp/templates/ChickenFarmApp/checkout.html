@@ -39,6 +39,7 @@
                             <span class="text-muted">R{{itm.1}} X {{itm.2}} </span>
                         </li>
                     </a>
+
                     {% endfor %}
                     {% else %}
                     <li class="list-group-item d-flex justify-content-between">
@@ -55,8 +56,11 @@
                 </ul>
 
             </div>
+
+                <h6 class="theList" style="display: none;" >{{itemInPage}}</h6>
+
             <div class="col-md-8 order-md-1">
-                <h4 class="mb-3">Billing address</h4>
+                <h4 class="mb-3">We use your paypal address to send you packages <br> <br> Make sure its correct</h4>
                 <form class="needs-validation" novalidate="">
 
                     <!-- <div class="mb-3">
@@ -67,7 +71,7 @@
                         </div>
                     </div> -->
 
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <label for="email">Email</label>
                         <input type="email" class="form-control" id="email" placeholder="you@example.com">
                         <div class="invalid-feedback">
@@ -83,6 +87,9 @@
                         </div>
                     </div>
 
+                    <hr class="mb-4"> -->
+
+                    <div id="paypal-button-container"></div>
 
                     <hr class="mb-4">
 
@@ -94,13 +101,75 @@
         <!-- ========================================================================= -->
     </div>
 
-         <!-- ========================================================================= --> 
-         <!-- YOCO PAYMENT -->
+    <!-- ========================================================================= --> 
+    <!-- Paypal PAYMENT, move this to seperate file -->
+
+    <!-- Include the PayPal JavaScript SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AfTmmaslbYzRc5moFnkJpJvyMtBcb8XPLdHLIELe_cfaBZRpGKcFDWN00rAYC0BxYLpbAuUkBsxHrgZh&currency=USD"></script>
+
+
+    <script>
+        // Render the PayPal button into #paypal-button-container
+        paypal.Buttons({
+
+            // Set up the transaction
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '{{count}}'
+                        }
+                    }]
+                });
+            },
+
+            // Finalize the transaction
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(orderData) {
+                    // Successful capture! For demo purposes:
+                    console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+                    var transaction = orderData.purchase_units[0].payments.captures[0];
+                    // alert('Transaction '+ transaction.status + ': ' + transaction.id + '\n\nSee console for all available details');
+
+                    // Replace the above to show a success message within this page, e.g.
+                    // const element = document.getElementById('paypal-button-container');
+                    // element.innerHTML = '';
+                    // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+                    // Or go to another URL:  actions.redirect('thank_you.html');
+
+                    $.ajax({                                                                                                // send info to server for processing
+                            type: 'POST',
+                            url: '/paypal',
+                            data: {
+                                // rslt: result,
+                                // mony: document.querySelectorAll('#mony')[0].innerHTML * 100,
+                                bought : document.querySelectorAll('.theList')[0].innerHTML + " " + transaction.id ,
+                                csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()
+                            },
+                            success: function (serverResponse) {
+                                console.log(serverResponse)
+                            }
+                    });
+                });
+            }
+
+
+        }).render('#paypal-button-container');
+    </script>
+    
+    <!-- ========================================================================= --> 
+    
+    
+    
+    <!-- ========================================================================= --> 
+    <!-- YOCO PAYMENT, move this to seperate file -->
 
     <!-- Include the Yoco SDK in your web page -->
-    <script src="https://js.yoco.com/sdk/v1/yoco-sdk-web.js"></script>
+    <!-- 
+    
+        <script src="https://js.yoco.com/sdk/v1/yoco-sdk-web.js"></script>
 
-    <!-- Create a pay button that will open the popup-->
+    Create a pay button that will open the popup
     <button id="checkout-button" class="btn btn-block">Pay</button>
     <script>
         var yoco = new window.YocoSDK({
@@ -149,6 +218,9 @@
 
         });
     </script>
+ 
+
+    -->
 
     <!-- ========================================================================= --> 
 </section>

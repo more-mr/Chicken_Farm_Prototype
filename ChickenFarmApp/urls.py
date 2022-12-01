@@ -17,6 +17,7 @@ urlpatterns = [
 
     path('nwuser', views.addUser),
     path('pay', views.pay),
+    path('paypal', views.paypal),
 
 
 ]

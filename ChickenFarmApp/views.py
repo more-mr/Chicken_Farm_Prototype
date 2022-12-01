@@ -67,6 +67,28 @@ def pay(request):
 
     return JsonResponse(response.json()) 
 
+def paypal(request):
+    print("you got a paypal payer. . .")
+    print( request.POST['bought'])  
+
+    got = Cart.objects.get(user= request.COOKIES.get('user'))
+
+    print("Before break " , got.bought)
+
+    if  got.bought == None:
+        got.bought = "break"
+
+    print("After save " , got.bought)
+
+    got.bought = got.bought + request.POST['bought']
+    got.save()
+
+    print("After concatination " , got.bought)
+
+    print(request.COOKIES.get('user'))
+
+    return JsonResponse({'state' : 'notfound'}) 
+
 
 def addUser(request):
     #ADD TO CART
