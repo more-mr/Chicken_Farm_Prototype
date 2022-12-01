@@ -1,5 +1,5 @@
 # D&S chicken site
-This is a ecommerce website made for selling chickens using Yoco as its payment method. . . yup 🐔
+This is a ecommerce website made for selling chickens using <s>Yoco</s> as its payment method. . . yup 🐔
 <br>
 ## How to get it working 🛠🔧🚀
 Your going to need python and pip(usually included in python)
